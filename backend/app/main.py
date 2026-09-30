@@ -8,6 +8,8 @@ from .routers import resources
 from .routers import replanning
 from .routers import data
 from .routers import decision
+from .routers import ml
+
 
 
 Base.metadata.create_all(bind=engine)
@@ -25,6 +27,7 @@ app.include_router(resources.router)
 app.include_router(replanning.router)
 app.include_router(data.router)
 app.include_router(decision.router)
+app.include_router(ml.router)
 
 
 @app.get("/")
